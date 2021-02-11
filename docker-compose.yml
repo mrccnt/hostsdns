@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+
+  hostsdns:
+    privileged: true
+    image: marcocontiorg/hostsdns:latest
+    container_name: hostsdns
+    hostname: hostsdns
+    restart: always
+    volumes:
+      - ./config.json:/app/config.json
+    ports:
+      - "53:53/udp"
