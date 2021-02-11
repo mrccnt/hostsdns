@@ -47,7 +47,7 @@ Let's Assume `hostsdns` is running on 192.168.1.194
 We know "myhost1" so hostsdns will respond by itself:
 
 ```shell
-nslookup myhost1 192.168.1.100
+nslookup myhost1 192.168.1.194
 #> Server:         192.168.1.194
 #> Address:        192.168.1.194#53
 #> 
@@ -59,7 +59,7 @@ nslookup myhost1 192.168.1.100
 We do not know anything about "google.com", so the query/request will be forwarded to cloudflare DNS:
 
 ```shell
-nslookup google.com 192.168.1.100
+nslookup google.com 192.168.1.194
 #> Server:         192.168.1.194
 #> Address:        192.168.1.194#53
 #> 
